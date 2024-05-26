@@ -1,0 +1,2 @@
+[console_scripts]
+ds_library = ds_library.cli:main

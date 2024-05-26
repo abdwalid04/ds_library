@@ -3,3 +3,9 @@ venv/
 2k_convos.csv
 
 test.ipynb
+
+.gitignore
+
+*.zip
+*.png
+*.npy

@@ -1,3 +1,16 @@
+Metadata-Version: 2.1
+Name: ds-library
+Version: 0.1.0
+Summary: A data science library for text embedding, clustering, dimensionality reduction, and visualization
+Home-page: https://github.com/abdwalid04/ds_library
+Author: Abdellah WALID
+Author-email: abdellahwalid04@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
 # Data Science Library
 ## Overview
 This library is designed to facilitate text embedding, clustering, dimensionality reduction, and visualization of clusters. It can be used both as a command-line interface (CLI) and as a Python module, providing flexibility and ease of use for data scientists and developers.
@@ -30,44 +43,11 @@ pip install .
 
 ## Usage
 ### As a CLI Tool
-The CLI tool provides several options to customize the embedding, clustering, and dimensionality reduction processes. Below are the available arguments and how to use them.
-
-Command-line Arguments
-
-- `--input_file:` Path to the input CSV file (required).
-- `--embedding_type:` Type of embedding model. Options: ["sentence_transformer"]. Default: "sentence_transformer".
-- `--embedding_model:` Name of the embedding model. Default: "paraphrase-MiniLM-L6-v2".
-- `--dim_reduction_algorithm:` Dimensionality reduction algorithm. Options: ["pca", "umap"]. Default: "pca".
-- `--num_components:` Number of components for dimensionality reduction. Options: [2, 3]. Default: 2.
-- `--clustring_threshold:` Threshold for clustering. Default: 0.7.
-- `--min_cluster_size:` Minimum size of a cluster. Default: 3.
-- `--clustring_batch_size:` Batch size for clustering. Default: 32.
-- `--parallel_clustring:` Flag to indicate if clustering should be done in parallel.
-- `--show_clustring_progress_bar:` Flag to indicate if a progress bar should be shown for clustering.
-- `--output_file:` Path to save the output plot (required).
-- `--output_npy:` Path to save the reduced embeddings as a numpy array (required).
-
-
-Below is an example command to run the CLI tool:
+The CLI tool allows you to process input data and output visualizations with ease. Use the following commands to interact with the CLI:
 
 ```bash
-ds_library --input_file path/to/your/input.csv --embedding_type sentence_transformer --embedding_model paraphrase-MiniLM-L6-v2 --dim_reduction_algorithm umap --num_components 2 --clustring_threshold 0.7 --min_cluster_size 3 --clustring_batch_size 32 --parallel_clustring --show_clustring_progress_bar --output_file output.png --output_npy output.npy
+ds_tool --input <input_file> --output <output_directory> --method <pca|umap> --clusters <number_of_clusters>
 ```
-Sample Usage
-
-- `Prepare your CSV file:` Ensure your CSV file has text data in last column. The tool will read this column for text processing. For example:
-```csv
-Copy code
-id,text
-1,"This is the first sentence."
-2,"This is the second sentence."
-3,"This is another sentence."
-...
-```
-
-- `Run the CLI tool:` Use the command provided above, substituting the example paths and parameters with your actual data and desired settings.
-
-- `Output:` The tool will generate a plot of the clustered data saved to the specified output_file, and the reduced embeddings saved as a numpy array to the specified output_npy.
 
 ### As a Python Module
 You can also integrate the library into your Python projects. Below is an example of how to use the library:
