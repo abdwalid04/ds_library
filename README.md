@@ -23,6 +23,28 @@ Navigate to the repository directory:
 cd ds_library
 ```
 
+Create a virtual environment:
+```bash
+python -m venv venv
+```
+
+Activate the virtual environment:
+
+On Windows:
+```bash
+venv\Scripts\activate
+```
+
+On macOS and Linux:
+```bash
+source venv/bin/activate
+```
+
+Install the requirements:
+```bash
+pip install -r requirements.txt
+```
+
 Install the library:
 ```bash
 pip install .
