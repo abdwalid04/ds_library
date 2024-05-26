@@ -4,8 +4,6 @@ venv/
 
 test.ipynb
 
-.gitignore
-
 *.zip
 *.png
 *.npy

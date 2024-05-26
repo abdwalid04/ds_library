@@ -1,5 +1,0 @@
-sentence-transformers
-umap-learn
-matplotlib
-numpy
-tqdm

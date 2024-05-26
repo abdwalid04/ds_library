@@ -79,10 +79,16 @@ from ds_library.agglomerative_clustering.agglomerative_clustering import Cluster
 from ds_library.dimensionality_reduction.dimensionality_reduction import DimensionalityReductionService
 from ds_library.visualization_service.visualization_service import VisualizationService
 
+import csv
+
+
+input_file = "2k_convos.csv"
+
+
 sentences = []
 
 # Read the CSV file into a list
-with open(args.input_file, "r", encoding="utf-8") as file:
+with open(input_file, "r", encoding="utf-8") as file:
     reader = csv.reader(file)
     next(reader)  # Skip the header line
     for row in reader:
